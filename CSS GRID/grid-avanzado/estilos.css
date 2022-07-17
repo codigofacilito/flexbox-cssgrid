@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial';
+}
+
+.grid{
+    display: grid;
+    /* gap: 1em; */
+    /* -start -end */
+    /* grid-template-columns:
+    [header-start footer-start] 1fr 1fr [header-end] 1fr [footer-end]
+    ;
+    grid-template-rows: 
+    1fr [header-start]  1fr [header-end footer-start] 1fr [footer-end]
+    ; */
+    /* grid-template-columns:repeat(3, [colum-start] 1fr [colum-end]);
+    grid-template-rows: repeat(4, [fila-start] 1fr [fila-end]); */
+    
+    /* auto-fill */
+
+    /* justify-content: space-evenly; */
+    /* align-content: space-evenly; */
+
+    /* place-content:center; */
+
+    /* justify-items: center; */
+    /* align-items: center; */
+    /* place-items: align justify; */
+
+    /* grid-template: grid-template-rows / grid-template-column; */
+    /* grid-template: 
+    "area1 area2 area3" 1fr
+    "area1 area2 area3" 3fr / 30px 100px 1fr
+    ; */
+
+    /* grid-template: 
+    [row-1] "area1 area2 area3" 1fr [row-2]
+            "area1 area2 area3"  3fr [row-3]
+    / [col-1] 30px 100px 1fr [col-2]
+    ; */
+
+    /* auto-flow */
+    
+    grid:auto-flow dense 50px 1fr /  1fr 1fr 1fr ;
+
+    width: 90%;
+    height: 600px;
+    outline: 3px solid;
+    margin: 20px auto;
+}
+
+.item{
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.item-1{
+    /* grid-column: header-start / header-end; */
+    /* grid-row: header-start / header-end; */
+    /* grid-column: colum-start 2 / colum-end 3;
+    grid-row:fila-start/fila-start 3; */
+    /* grid-area: header; */
+    background-color: slateblue;
+
+}
+
+.item-2{
+    /* grid-column: main-start / main-end; */
+    /* grid-row: main-start / main-end; */
+    /* grid-area: footer; */
+    background-color: crimson;
+
+    /* place-self: align justify */
+}
+
+.item-3{
+    /* grid-column: sidebar-start / sidebar-end; */
+    /* grid-row: sidebar-start / sidebar-end; */
+    background-color: coral;
+}
+
+.item-4{
+    /* grid-column: juan-start / juan-end; */
+    /* grid-row: juan-start / juan-end; */
+    background-color: indigo;
+}

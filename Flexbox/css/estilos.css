@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+.container{
+    /* flex-direction: row - row-reverse - column - column-reverse;*/
+    /* flex-wrap: wrap - wrap-reverse - nowrap; */
+    /* flex-flow: flexdirection wrap; */
+    /*  justify-content: center - space-evenly - space-between 
+        space-around - space-evenly - flex-start - flex-end; */
+    /* align-items: center - flex-start - flex-end - baseline
+        - stretch; */
+    /*  align-content: center - space-evenly - space-between 
+    space-around - space-evenly - flex-start - flex-end; */
+    width: 450px;
+    height: 600px;
+    outline: 2px solid ;
+    margin: 60px auto;
+
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+}
+
+.element{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: slateblue;
+    color: #fff;
+    font-size: 2rem;
+
+    order: 0;
+    /* flex-grow: 1; */
+    /* flex-shrink:1; */
+    /* flex-basis:100px; */
+
+
+    /* flex:1 2; */
+
+}
+
+.title{
+    margin: auto;
+}
+
+.enlace:first-of-type{
+    margin-left: auto;
+}
+
+.element-1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.element-2{
+    background-color: coral;
+}
+
+.element-3{
+    background-color: darkgreen;
+}
+
+.element-4{
+    background-color: purple;
+
+}

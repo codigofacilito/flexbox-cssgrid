@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f2f2f2;
+    font-family: 'Arial';
+}
+
+.gallery{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.gallery__title{
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+.gallery__container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery__picture{
+    /* flex-basis: 300px;
+    flex-grow: 1; */
+    flex: 300px;
+}
+
+.gallery__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

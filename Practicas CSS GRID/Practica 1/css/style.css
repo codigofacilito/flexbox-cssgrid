@@ -1,0 +1,120 @@
+:root{
+    
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--very-light-gray);
+}
+
+.card{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card__title{
+    font-size: 1.7rem;
+    font-weight: 200;
+    line-height: 1.5;
+    color: var(--very-dark-blue);
+}
+
+.card__title--bold{
+    font-weight: 600;
+}
+
+.card__paragraph{
+    line-height: 1.5;
+    color: var(--grayish-blue);
+    margin-top: 1.5em;
+}
+
+.card__container{
+    padding-top: 80px;
+    text-align: left;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    "card1"
+    "card2"
+    "card3"
+    "card4";
+
+    justify-items: center;
+    gap: 2.5em ;
+}
+
+.card__item{
+    width: 90%;
+    max-width: 350px;
+    padding: 1.5em 1.7em;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px -6px hsl(212, 86%, 64%, .5);
+    border-top: 4px solid var(--cyan);
+
+    grid-area: card1;
+}
+
+.card__item:nth-child(2){
+    grid-area: card2;
+    border-top: 4px solid var(--red);
+}
+.card__item:nth-child(3){
+    grid-area: card3;
+    border-top: 4px solid var(--orange);
+}
+.card__item:nth-child(4){
+    grid-area: card4;
+    border-top: 4px solid var(--blue);
+}
+
+.card__name{
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.card__copy{
+    color: var(--very-dark-blue);
+    font-weight: 200;
+    padding-bottom: 40px;
+}
+
+.card__picture{
+    width: max-content;
+    margin-left: auto;
+}
+
+.card__img{
+    display: block;
+}
+
+@media (min-width:768px) {
+    .card__container{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+        ".      card1       ."
+        "card2  card1   card3"
+        "card2  card4   card3"
+        ".      card4        ."
+        ;
+        gap: 2em ;
+    }
+}
